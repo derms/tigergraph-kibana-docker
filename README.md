@@ -80,3 +80,5 @@ The solution contains the following three containers
 * tg-container (TigerGraph container)
 * es-container (ElasticSearch container)
 * kb-container (Kibana container)
+
+Refer to the [docker-compose.yml](docker-compose.yml) file for more details
