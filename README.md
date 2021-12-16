@@ -6,6 +6,8 @@ Sample way to configure ElasticSerch / Kibana logs using docker-compose.
 
 Based on this [blog](https://medium.com/@huangkai.hsu-/centralized-tigergraph-logs-with-elasticsearch-kibana-and-filebeat-dadf308d3aea)
 
+Refer to the [docker-compose.yml](docker-compose.yml) file for more details
+
 ## Setup (once off)
 
 1. Clone this repo 
@@ -15,7 +17,7 @@ Based on this [blog](https://medium.com/@huangkai.hsu-/centralized-tigergraph-lo
 docker-compose up -d --build
 ```
 
-3. Wait for the kibana UI to be ready at (http://localhost:5601/)
+3. Wait for the kibana UI to be ready at http://localhost:5601/
 
 4. Execute the following command
 ```
