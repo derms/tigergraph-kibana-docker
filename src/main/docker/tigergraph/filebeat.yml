@@ -1,0 +1,325 @@
+# Customiszd from command gadmin log build filebeat --host=es-container 
+filebeat.inputs:
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/admin/ADMIN#1.out
+  tags:
+  - ADMIN
+  - m1
+  - ADMIN_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/admin/ADMIN.INFO
+  tags:
+  - ADMIN
+  - m1
+  - ADMIN_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/controller/CTRL#1.log
+  tags:
+  - CTRL
+  - m1
+  - CTRL_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/controller/CTRL#1.out
+  tags:
+  - CTRL
+  - m1
+  - CTRL_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/dict/DICT#1.out
+  tags:
+  - DICT
+  - m1
+  - DICT_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/dict/DICT.INFO
+  tags:
+  - DICT
+  - m1
+  - DICT_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/etcd/ETCD#1.out
+  tags:
+  - ETCD
+  - m1
+  - ETCD_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/executor/EXE_1.log
+  tags:
+  - EXE
+  - m1
+  - EXE_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/executor/EXE_1.out
+  tags:
+  - EXE
+  - m1
+  - EXE_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/gpe/GPE_1#1.out
+  tags:
+  - GPE
+  - m1
+  - GPE_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/gse/GSE_1#1.out
+  tags:
+  - GSE
+  - m1
+  - GSE_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/gse/log.INFO
+  tags:
+  - GSE
+  - m1
+  - GSE_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/gsql/GSQL#1.out
+  tags:
+  - GSQL
+  - m1
+  - GSQL_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/gsql/log.INFO
+  tags:
+  - GSQL
+  - m1
+  - GSQL_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/gui/GUI#1.out
+  tags:
+  - GUI
+  - m1
+  - GUI_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/informant/IFM#1.log
+  tags:
+  - IFM
+  - m1
+  - IFM_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/informant/IFM#1.out
+  tags:
+  - IFM
+  - m1
+  - IFM_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafka/controller.log
+  tags:
+  - KAFKA
+  - m1
+  - KAFKA_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafka/kafka-request.log
+  tags:
+  - KAFKA
+  - m1
+  - KAFKA_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafka/kafka.log
+  tags:
+  - KAFKA
+  - m1
+  - KAFKA_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafka/server.log
+  tags:
+  - KAFKA
+  - m1
+  - KAFKA_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafka/state-change.log
+  tags:
+  - KAFKA
+  - m1
+  - KAFKA_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafkaconn/KAFKACONN#1.out
+  tags:
+  - KAFKACONN
+  - m1
+  - KAFKACONN_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafkaconn/kafkaconn.log
+  tags:
+  - KAFKACONN
+  - m1
+  - KAFKACONN_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafkastrm-ll/KAFKASTRM-LL_1.out
+  tags:
+  - KAFKASTRM-LL
+  - m1
+  - KAFKASTRM-LL_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/kafkastrm-ll/kafkastrm-ll.log
+  tags:
+  - KAFKASTRM-LL
+  - m1
+  - KAFKASTRM-LL_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/nginx/logs/NGINX#1.out
+  tags:
+  - NGINX
+  - m1
+  - NGINX_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/nginx/logs/error.log
+  tags:
+  - NGINX
+  - m1
+  - NGINX_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/restpp/RESTPP#1.INFO
+  tags:
+  - RESTPP
+  - m1
+  - RESTPP_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/restpp/RESTPP#1.out
+  tags:
+  - RESTPP
+  - m1
+  - RESTPP_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/ts3/TS3_1.log
+  tags:
+  - TS3
+  - m1
+  - TS3_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/ts3/TS3_1.out
+  tags:
+  - TS3
+  - m1
+  - TS3_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/ts3serv/TS3SERV#1.out
+  tags:
+  - TS3SERV
+  - m1
+  - TS3SERV_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/zk/ZK#1.out
+  tags:
+  - ZK
+  - m1
+  - ZK_1
+  enabled: true
+
+- type: log
+  paths:
+  - /home/tigergraph/tigergraph/log/zk/zookeeper.log
+  tags:
+  - ZK
+  - m1
+  - ZK_1
+  enabled: true
+
+
+output.elasticsearch:
+  hosts:
+  - es-container
+
+# CUSTOMIZED FROM HERE
+setup.kibana:
+  host: kb-container

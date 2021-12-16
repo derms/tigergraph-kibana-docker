@@ -1,0 +1,56 @@
+version: "3.3"
+services:
+  tigergraph:
+    build: src/main/docker/tigergraph
+    container_name: tg-container
+    hostname: tg-container
+    networks:
+      - dev
+    ports:
+      - "14022:22"
+      - "9000:9000"
+      - "14240:14240"
+    depends_on:
+      - elasticsearch
+      - kibana
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost:9000/echo || exit 1"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - ./src/main/config/tigergraph:/home/tigergraph/config
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    stdin_open: true
+    tty: true
+
+  elasticsearch:
+    container_name: es-container
+    hostname: es-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.16.1
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    networks:
+      - dev
+    ports:
+      - 9200:9200
+
+  kibana:
+    container_name: kb-container
+    hostname: kb-container
+    image: docker.elastic.co/kibana/kibana:7.16.1
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es-container:9200
+    networks:
+      - dev
+    depends_on:
+      - elasticsearch
+    ports:
+      - 5601:5601
+networks:
+  dev:
+    driver: bridge
