@@ -21,7 +21,7 @@ docker-compose up -d --build
 
 4. Execute the following command
 ```
-docker exec -ti -u root tg-container 'filebeat setup -e'
+docker exec -ti -u root tg-container filebeat setup -e
 ```
 
 ## Startup
